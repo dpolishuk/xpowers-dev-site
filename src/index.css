@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 97%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 226 100% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 0% 97%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 52% 49%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 226 100% 35%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 97%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 226 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 97%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 82%;
+    --sidebar-ring: 226 100% 35%;
+  }
+
+  body {
+    @apply bg-ij-bg text-ij-text;
+    font-family: 'Inter', 'MiSans', 'Noto Sans SC', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-ij-textBright;
+  }
+
+  code {
+    @apply font-mono;
+  }
+}
+
+@layer components {
+  .ij-comment {
+    @apply text-ij-comment;
+  }
+  .ij-keyword {
+    @apply text-ij-keyword;
+  }
+  .ij-string {
+    @apply text-ij-string;
+  }
+  .ij-function {
+    @apply text-ij-function;
+  }
+  .ij-number {
+    @apply text-ij-number;
+  }
+  .ij-panel {
+    @apply bg-ij-bg2 border border-ij-bg3 rounded-lg;
+  }
+  .ij-gutter {
+    @apply bg-ij-bg2 text-ij-comment text-right select-none;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-ij-keyword via-ij-function to-ij-number bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
